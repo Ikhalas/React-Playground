@@ -6,13 +6,13 @@ export default class Home extends Component {
       <div
         style={{
           height: "90vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          textAlign: "center",
         }}
       >
+        <br />
         <h1>Welcome to my Playground</h1>
         <h2>test source tree</h2>
+        <h2>test source tree v2</h2>
       </div>
     );
   }

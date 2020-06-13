@@ -11,6 +11,7 @@ export default class Home extends Component {
       >
         <br />
         <h1>Welcome to my Playground</h1>
+        <p>test husky</p>
       </div>
     );
   }

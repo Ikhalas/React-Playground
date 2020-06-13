@@ -11,7 +11,7 @@ import {
   Button,
 } from "reactstrap";
 import { connect } from "react-redux";
-import { usersFetch, userDelete } from "./actions";
+import { usersFetch, userDelete } from "../actions";
 
 class Users extends Component {
   componentDidMount() {

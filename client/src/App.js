@@ -5,7 +5,8 @@ import Navbar from "./Navbar";
 
 import Home from "./Home";
 import Pagination from "./components/pagination/Pagination";
-import ReduxContainer from "./components/redux/ReduxContainer"
+import ReduxContainer from "./components/redux/reduxf-fetchdata/ReduxContainer"
+import ReduxForm from "./components/redux/reduxform/ReduxForm.jsx"
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -16,6 +17,7 @@ export default class App extends Component {
         <Route exact path="/" component={Home} />
         <Route exact path="/pagination" component={Pagination} />
         <Route exact path="/redux" component={ReduxContainer} />
+        <Route exact path="/reduxform" component={ReduxForm} />
       </Switch>
     );
   }

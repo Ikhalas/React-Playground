@@ -5,7 +5,7 @@ import Users from "./Users";
 import Products from "./Products";
 
 import "react-perfect-scrollbar/dist/css/styles.css";
-import "../../assets/css/reduxcontainer.css"; // override the styles to display ScrollBar always.
+import "../../../assets/css/reduxcontainer.css"; // override the styles to display ScrollBar always.
 
 export default class ReduxContainer extends Component {
   render() {

@@ -11,7 +11,7 @@ import {
   Button,
 } from "reactstrap";
 import { connect } from "react-redux";
-import { productsFetch, productDelete } from "./actions";
+import { productsFetch, productDelete } from "../actions";
 
 class Products extends Component {
   componentDidMount() {

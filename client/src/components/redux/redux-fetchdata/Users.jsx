@@ -42,9 +42,7 @@ class Users extends Component {
                 </Col>
                 <Col md="6">
                   <CardTitle>
-                    {user.first_name}
-                    {' '}
-                    {user.last_name}
+                    {user.first_name} {user.last_name}
                   </CardTitle>
                   <CardSubtitle>{user.email}</CardSubtitle>
                   <CardText>{user.gender}</CardText>
@@ -52,8 +50,7 @@ class Users extends Component {
                     color="danger"
                     size="sm"
                     block
-                    onClick={() => this.deleteUser(user.id)}
-                  >
+                    onClick={() => this.deleteUser(user.id)}>
                     DELETE
                   </Button>
                 </Col>

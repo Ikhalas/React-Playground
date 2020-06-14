@@ -40,8 +40,7 @@ class Products extends Component {
                     color="danger"
                     size="sm"
                     block
-                    onClick={() => this.deleteProduct(product.id)}
-                  >
+                    onClick={() => this.deleteProduct(product.id)}>
                     DELETE
                   </Button>
                 </Col>

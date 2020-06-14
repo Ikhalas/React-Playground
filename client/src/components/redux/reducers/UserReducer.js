@@ -1,4 +1,4 @@
-import { USERS_FETCH } from "../type"
+import { USERS_FETCH } from '../type';
 
 export default function (state = [], action) {
   switch (action.type) {

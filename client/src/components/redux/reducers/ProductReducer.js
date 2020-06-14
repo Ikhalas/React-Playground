@@ -1,4 +1,4 @@
-import { PRODUCTS_FETCH } from "../type"
+import { PRODUCTS_FETCH } from '../type';
 
 export default function (state = [], action) {
   switch (action.type) {

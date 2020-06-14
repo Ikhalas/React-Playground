@@ -1,14 +1,6 @@
 {
   "user": [
     {
-      "id": 2,
-      "first_name": "Nola",
-      "last_name": "Gertz",
-      "email": "ngertz1@soup.io",
-      "gender": "Female",
-      "avartar": "https://robohash.org/porroquaevoluptate.jpg?size=50x50&set=set1"
-    },
-    {
       "id": 3,
       "first_name": "Madeline",
       "last_name": "Awdry",
@@ -778,12 +770,6 @@
     }
   ],
   "product": [
-    {
-      "id": 2,
-      "product_name": "Bytecard",
-      "price": "$35.57",
-      "inventory": "0.82"
-    },
     {
       "id": 3,
       "product_name": "Home Ing",

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -7,7 +7,7 @@ import {
   Nav,
   NavItem,
   NavbarText,
-} from "reactstrap";
+} from 'reactstrap';
 
 export default class MyNavbar extends Component {
   render() {

@@ -1,13 +1,15 @@
-import React, { Component } from "react";
-import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
+/* eslint-disable react/no-array-index-key */
 
-import "../../assets/css/pagination.css";
+import React, { Component } from 'react';
+import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+
+import '../../assets/css/pagination.css';
 
 export default class MyPagination extends Component {
   constructor() {
     super();
     // create data set of random length
-    this.dataSet = [...Array(500)].map((a, i) => "Record " + (i + 1));
+    this.dataSet = [...Array(500)].map((a, i) => `Record ${i + 1}`);
     this.pageSize = 50;
     this.pagesCount = Math.ceil(this.dataSet.length / this.pageSize);
 
@@ -41,8 +43,7 @@ export default class MyPagination extends Component {
               <PaginationItem active={i === currentPage} key={i}>
                 <PaginationLink
                   onClick={(e) => this.handleClick(e, i)}
-                  href="#"
-                >
+                  href="#">
                   {i + 1}
                 </PaginationLink>
               </PaginationItem>
@@ -61,11 +62,11 @@ export default class MyPagination extends Component {
         {this.dataSet
           .slice(currentPage * this.pageSize, (currentPage + 1) * this.pageSize)
           .map((data, i) => (
-            <div className="data-slice" style={{textAlign:'center'}} key={i}>
+            <div className="data-slice" style={{ textAlign: 'center' }} key={i}>
               {data}
             </div>
           ))}
-          <br />
+        <br />
       </>
     );
   }

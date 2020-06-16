@@ -47,6 +47,14 @@ class Users extends Component {
                   <CardSubtitle>{user.email}</CardSubtitle>
                   <CardText>{user.gender}</CardText>
                   <Button
+                    className="text-white"
+                    color="warning"
+                    size="sm"
+                    block
+                    disabled>
+                    EDIT
+                  </Button>
+                  <Button
                     color="danger"
                     size="sm"
                     block

@@ -26,10 +26,6 @@ export default class MyNavbar extends Component {
                 <Link to="/redux">Redux</Link>
               </NavItem>
               &nbsp;&nbsp;
-              <NavItem>
-                <Link to="/reduxform">Redux Form</Link>
-              </NavItem>
-              &nbsp;&nbsp;
             </Nav>
             <NavbarText>by Ikhalas</NavbarText>
           </Collapse>

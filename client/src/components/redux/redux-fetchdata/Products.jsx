@@ -10,6 +10,7 @@ import {
   CardSubtitle,
   Button,
 } from 'reactstrap';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { productsFetch, productDelete } from '../actions';
 
@@ -25,29 +26,40 @@ class Products extends Component {
   }
 
   render() {
-    const { products } = this.props;
+    const { products, history } = this.props;
     return (
       <>
-        {products.map((product) => (
-          <Card key={product.id} style={{ marginTop: '10px' }}>
-            <CardBody>
-              <Row>
-                <Col md="12">
-                  <CardTitle>{product.product_name}</CardTitle>
-                  <CardSubtitle>{product.price}</CardSubtitle>
-                  <CardText>{product.inventory}</CardText>
-                  <Button
-                    color="danger"
-                    size="sm"
-                    block
-                    onClick={() => this.deleteProduct(product.id)}>
-                    DELETE
-                  </Button>
-                </Col>
-              </Row>
-            </CardBody>
-          </Card>
-        ))}
+        {Array.isArray(products) &&
+          products.map((product) => (
+            <Card key={product.id} style={{ marginTop: '10px' }}>
+              <CardBody>
+                <Row>
+                  <Col md="12">
+                    <CardTitle>{product.product_name}</CardTitle>
+                    <CardSubtitle>{product.price}</CardSubtitle>
+                    <CardText>{product.inventory}</CardText>
+                    <Button
+                      className="text-white"
+                      color="warning"
+                      size="sm"
+                      block
+                      onClick={() =>
+                        history.push(`/reduxform-productedit/${product.id}`)
+                      }>
+                      EDIT
+                    </Button>
+                    <Button
+                      color="danger"
+                      size="sm"
+                      block
+                      onClick={() => this.deleteProduct(product.id)}>
+                      DELETE
+                    </Button>
+                  </Col>
+                </Row>
+              </CardBody>
+            </Card>
+          ))}
       </>
     );
   }
@@ -55,14 +67,16 @@ class Products extends Component {
 
 Products.propTypes = {
   products: PropTypes.instanceOf(Array).isRequired,
+  // products: PropTypes.object.isRequired,
   productsFetch: PropTypes.func.isRequired,
   productDelete: PropTypes.func.isRequired,
+  history: PropTypes.shape.isRequired,
 };
 
 function mapStateToProps({ products }) {
   return { products };
 }
 
-export default connect(mapStateToProps, { productsFetch, productDelete })(
-  Products,
+export default withRouter(
+  connect(mapStateToProps, { productsFetch, productDelete })(Products),
 );
